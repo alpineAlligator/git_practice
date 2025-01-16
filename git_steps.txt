@@ -1,0 +1,13 @@
+git init
+echo "Initial content" > file.txt
+git add file.txt
+git commit -m "Initial commit"
+git branch -m master
+git checkout -b feature-xyz
+echo "New content added in feature-xyz branch" >> file.txt
+git add file.txt
+git commit -m "Modify file in feature-xyz branch"
+git checkout master
+git merge feature-xyz
+git remote add origin <remote-repository-URL>
+git push -u origin master
